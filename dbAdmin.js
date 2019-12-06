@@ -131,13 +131,13 @@ function initDevDBAdmin(app) {
       const result = await db.remove(id);
       res.end(`DELETED: ${id}`);
     } else if (action == 'UPDATE') {
-      const value = JSON.parse(req.body.value);
+      const value = req.body.value;
       const result = db.update(id, prev_value => {
         return value;
       });
       res.end(`UPDATED: ${id}`);
     } else if (action == 'CREATE') {
-      const value = JSON.parse(req.body.value);
+      const value = req.body.value;
       const result = db.update(id, () => {
         return value;
       });
