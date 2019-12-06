@@ -1,6 +1,6 @@
 {
   "name": "reshuffle-db-admin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Super Simple Admin interface for Reshuffle DB",
   "main": "dbAdmin.js",
   "scripts": {
