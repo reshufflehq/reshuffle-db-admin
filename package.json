@@ -1,8 +1,12 @@
 {
   "name": "@reshuffle/db-admin",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Super Simple Admin interface for Reshuffle DB",
   "main": "dbAdmin.js",
+  "homepage": "https://github.com/reshufflehq/reshuffle-db-admin#readme",
+  "bugs": {
+    "url": "https://github.com/reshufflehq/reshuffle-db-admin/issues"
+  }
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
