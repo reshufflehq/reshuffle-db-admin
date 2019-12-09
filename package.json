@@ -1,7 +1,7 @@
 {
   "name": "reshuffle-db-admin",
   "version": "0.0.9",
-  "description": "Super Simple  Admin interface for Reshuffle DB",
+  "description": "Super Simple Admin interface for Reshuffle DB",
   "main": "dbAdmin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
