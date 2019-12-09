@@ -136,7 +136,6 @@ var db = require('@reshuffle/db');
       });
       res.end(`UPDATED: ${id}`);
     } else if (action == 'CREATE') {
-      console.log(req.body.value);
       const value = req.body.value;
       const result = db.update(id, () => {
         return value;

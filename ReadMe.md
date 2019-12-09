@@ -2,9 +2,13 @@
 `npm install reshuffle-db-admin`
 
 ## Use
-`const devDBAdmin = require('./_dev_db_admin');`
 
-`devDBAdmin.initDevDBAdmin(app);`
+
+`const devDBAdmin = require('reshuffle-db-admin');`
+
+After you declare the express app, add this line:
+
+`app.use("/dev/db-admin", express.json(), devDBAdmin.devDBAdminHandler);`
 
 ## Access 
-On a reshuffle project go to https://your-reshuffle-url/dev-only/db-admin
+On a reshuffle project go to https://your-reshuffle-url/dev/db-admin
