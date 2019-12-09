@@ -1,10 +1,10 @@
 ## Install 
-`npm install reshuffle-db-admin`
+`npm install @reshuffle/db-admin`
 
 ## Use
 
 
-`const devDBAdmin = require('reshuffle-db-admin');`
+`const devDBAdmin = require('@reshuffle/db-admin');`
 
 After you declare the express app, add this line:
 
