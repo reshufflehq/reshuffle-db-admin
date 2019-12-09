@@ -1,5 +1,5 @@
 {
-  "name": "reshuffle-db-admin",
+  "name": "@reshuffle/db-admin",
   "version": "0.0.9",
   "description": "Super Simple Admin interface for Reshuffle DB",
   "main": "dbAdmin.js",
