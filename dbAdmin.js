@@ -11,9 +11,8 @@ var db = require('@reshuffle/db');
  * 3) Remember to remove that line when going to prod!
  */
 
-function initDevDBAdmin(app) {
   const allKeysQuery = db.Q.filter(db.Q.key.startsWith(''));
-  app.get('/dev-only/db-admin', async (_, res) => {
+  const handleGet =  async (_, res) => {
     try {
       const result = await db.find(allKeysQuery);
       var output = `<html>
@@ -122,9 +121,9 @@ function initDevDBAdmin(app) {
       console.error(err);
       res.sendStatus(500);
     }
-  });
+  };
 
-  app.post('/dev-only/db-admin', express.json(), async (req, res) => {
+  const handlePost =  async (req, res) => {
     var id = req.body.id;
     var action = req.body.action;
     if (action == 'DELETE') {
@@ -137,6 +136,7 @@ function initDevDBAdmin(app) {
       });
       res.end(`UPDATED: ${id}`);
     } else if (action == 'CREATE') {
+      console.log(req.body.value);
       const value = req.body.value;
       const result = db.update(id, () => {
         return value;
@@ -145,9 +145,13 @@ function initDevDBAdmin(app) {
     } else {
       res.end(`action ${action} not found`);
     }
-  });
-}
+  };
 
-exports.initDevDBAdmin = function(app) {
-    initDevDBAdmin(app);
+
+exports.devDBAdminHandler = function(req, res, next) {
+    if(req.method == "GET"){
+      handleGet(req, res);
+    }else if (req.method == "POST"){
+      handlePost(req, res);
+    }
 }
