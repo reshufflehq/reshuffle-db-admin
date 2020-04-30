@@ -1,3 +1,5 @@
+# We have terminated the backend for this project.  Old Reshuffle projects can no longer be deployed.
+
 ## Install 
 `npm install @reshuffle/db-admin`
 
